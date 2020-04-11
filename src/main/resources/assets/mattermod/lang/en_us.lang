@@ -1,5 +1,13 @@
 #Items
+item.test_item.name=Test item!
 item.matter.name=Matter
 
 #Blocks
+tile.test_block.name=Test block!
 tile.matter_processor_block.name=Matter Processor
+
+#Fluids
+fluid.test_fluid=Test fluid!
+
+#CreativeTabs
+itemGroup.mattermod=Matter Mod

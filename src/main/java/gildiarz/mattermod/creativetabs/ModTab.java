@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 public class ModTab extends CreativeTabs {
 
     public ModTab() {
-        super(Reference.NAME);
+        super(Reference.MODID);
     }
 
     @Override

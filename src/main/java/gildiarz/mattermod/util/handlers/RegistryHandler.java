@@ -1,12 +1,17 @@
 package gildiarz.mattermod.util.handlers;
 
+import gildiarz.mattermod.Reference;
+import gildiarz.mattermod.blocks.BlockFluidBase;
 import gildiarz.mattermod.init.ModBlocks;
+import gildiarz.mattermod.init.ModFluids;
 import gildiarz.mattermod.init.ModItems;
 import gildiarz.mattermod.util.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -47,10 +52,26 @@ public class RegistryHandler
 			}
 		}
     }
+
+    private static void registerFluids()
+    {
+        for(Fluid fluid : ModFluids.FLUIDS)
+        {
+            FluidRegistry.registerFluid(fluid);
+            FluidRegistry.addBucketForFluid(fluid);
+        }
+
+	    ModFluids.initBlocksForFluids();
+
+	    for(BlockFluidBase fluidBlock : ModFluids.FLUID_BLOCKS)
+        {
+            RenderHandler.registerCustomMeshesAndStates(fluidBlock, Reference.MODID + ":" + fluidBlock.getFluidName());
+        }
+    }
     
     public static void preInitRegistries(FMLPreInitializationEvent event)
     {
-
+        registerFluids();
     }
 
     public static void initRegistries(FMLInitializationEvent event)

@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "mattermod:blocks/matter_processor_block"
-  }
-}

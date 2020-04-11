@@ -2,7 +2,9 @@ package gildiarz.mattermod;
 
 import gildiarz.mattermod.creativetabs.ModTab;
 import gildiarz.mattermod.proxy.CommonProxy;
+import gildiarz.mattermod.util.handlers.RegistryHandler;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -19,6 +21,9 @@ public class MatterMod
 
 	public static final CreativeTabs MOD_TAB = new ModTab();
 
+	//Enable buckets for mod fluids.
+	static { FluidRegistry.enableUniversalBucket(); }
+
 	@Instance
 	public static MatterMod instance;
 
@@ -30,17 +35,21 @@ public class MatterMod
 	{
 		logger = event.getModLog();
 		logger.info("Start loading!");
+
+		RegistryHandler.preInitRegistries(event);
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		
+		RegistryHandler.initRegistries(event);
 	}
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
+		RegistryHandler.postInitRegistries(event);
+
 		logger.info("Finish loading!");
 	}
 }

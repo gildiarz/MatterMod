@@ -15,5 +15,4 @@ public class ModBlocks
 
     //Blocks!
     public static final Block TEST_BLOCK = new BlockBase("test_block", Material.ROCK);
-
 }

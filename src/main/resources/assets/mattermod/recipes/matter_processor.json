@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+    "III",
+    "IDI",
+    "III"
+  ],
+
+  "key":
+  {
+    "I":
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    "D":
+    {
+      "item": "minecraft:diamond_block"
+    }
+  },
+
+  "result":
+  {
+    "item": "mattermod:matter_processor_block",
+    "count": 1
+  }
+}

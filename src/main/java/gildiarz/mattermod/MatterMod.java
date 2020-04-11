@@ -17,7 +17,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_MC_VERSIONS)
 public class MatterMod
 {
-	private static Logger logger;
+	public static Logger logger;
 
 	public static final CreativeTabs MOD_TAB = new ModTab();
 

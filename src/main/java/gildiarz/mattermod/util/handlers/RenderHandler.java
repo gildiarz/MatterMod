@@ -1,6 +1,5 @@
 package gildiarz.mattermod.util.handlers;
 
-import gildiarz.mattermod.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.ItemMeshDefinition;

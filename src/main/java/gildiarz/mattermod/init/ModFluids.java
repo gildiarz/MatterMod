@@ -5,7 +5,6 @@ import java.util.List;
 
 import gildiarz.mattermod.blocks.BlockFluidBase;
 import gildiarz.mattermod.fluids.FluidBase;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fluids.Fluid;
 

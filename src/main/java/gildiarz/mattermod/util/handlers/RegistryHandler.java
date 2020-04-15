@@ -1,6 +1,6 @@
 package gildiarz.mattermod.util.handlers;
 
-import gildiarz.mattermod.Reference;
+import gildiarz.mattermod.MatterMod;
 import gildiarz.mattermod.blocks.BlockFluidBase;
 import gildiarz.mattermod.init.ModBlocks;
 import gildiarz.mattermod.init.ModFluids;
@@ -65,7 +65,7 @@ public class RegistryHandler
 
 	    for(BlockFluidBase fluidBlock : ModFluids.FLUID_BLOCKS)
         {
-            RenderHandler.registerCustomMeshesAndStates(fluidBlock, Reference.MODID + ":" + fluidBlock.getFluidName());
+            RenderHandler.registerCustomMeshesAndStates(fluidBlock, MatterMod.MODID + ":" + fluidBlock.getFluidName());
         }
     }
     

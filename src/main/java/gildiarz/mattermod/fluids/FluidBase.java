@@ -1,6 +1,6 @@
 package gildiarz.mattermod.fluids;
 
-import gildiarz.mattermod.Reference;
+import gildiarz.mattermod.MatterMod;
 import gildiarz.mattermod.init.ModFluids;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.ResourceLocation;
@@ -15,8 +15,8 @@ public class FluidBase extends Fluid
     {
         super(
             name, 
-            new ResourceLocation(Reference.MODID + ":blocks/" + name + "_still"),   
-            new ResourceLocation(Reference.MODID + ":blocks/" + name + "_flow")
+            new ResourceLocation(MatterMod.MODID + ":blocks/" + name + "_still"),
+            new ResourceLocation(MatterMod.MODID + ":blocks/" + name + "_flow")
         );
 
         this.setUnlocalizedName(name);
